@@ -1,3 +1,15 @@
-<h2 id='title'>Welcome to Ember.js</h2>
+<style>
+	button {
+		width: 25px;
+		height: 25px;
+		margin: 5px;
+	}
+</style>
 
-{{outlet}}
+{{#each bombs}}
+	<div class="row">
+		{{#each this}}
+			{{sweeper-mine contentBinding="this"}}
+		{{/each}}
+	</div>
+{{/each}}
