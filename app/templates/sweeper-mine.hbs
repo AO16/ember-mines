@@ -1,0 +1,23 @@
+<div {{bind-attr class=":mine view.mineClass view.mine.checked:hasBeenChecked view.blownUp:blownUp view.gameOverBomb:gameOverBomb"}} {{action "checkMine" on="click" target="view"}}>
+	{{#if view.blownUp}}
+		<img src="bombClicked.png" alt="bomb!" title="bomb!" />
+	{{else}}
+		{{#if view.gameOverBomb}}
+			<img src="bomb.png" alt="bomb!" title="bomb!" />
+		{{else}}
+			{{#if view.mine.flag}}
+				<img src="flag.png" alt="flag" title="flag" />
+			{{else}}
+				{{#if view.mine.checked}}
+					{{#if view.mine.surroundingBombs}}
+						<span>{{view.mine.surroundingBombs}}</span>
+					{{else}}
+						&nbsp;
+					{{/if}}
+				{{else}}
+					&nbsp;
+				{{/if}}
+			{{/if}}
+		{{/if}}
+	{{/if}}
+</div>
