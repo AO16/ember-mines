@@ -99,6 +99,8 @@ var checkSurroundingMines = function(board, currentMine) {
 		}
 	];
 
+	currentMine.set('surroundingBombs', 0);
+
 	surroundingMines.forEach(function(mineProps) {
 		grabMine(mineProps.row, mineProps.col, board, function(mine) {
 			if (mine && !mine.get('checked')) {
