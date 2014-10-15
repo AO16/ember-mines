@@ -48,7 +48,20 @@ export default Ember.View.extend({
 		if (this.get('controller.gameOver')) {
 			return;
 		}
+
 		this.toggleProperty('mine.flag');
+
+		var correctBombCount = 0;
+
+		this.get('controller.board.rows').forEach(function(row) {
+			row.get('mines').forEach(function(mine) {
+				if (mine.get('bomb') && mine.get('flag')) {
+					correctBombCount++;
+				}
+			});
+		});
+
+		this.set('controller.wonGame', (correctBombCount === this.get('controller.bombCount')));
 	}
 });
 
