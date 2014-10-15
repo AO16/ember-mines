@@ -57,7 +57,7 @@ var createBoard = function(self) {
 	}
 
 	return board;
-}
+};
 
 var randomNum = function (low, high) {
 	return Math.floor((Math.random() * high) + low);
