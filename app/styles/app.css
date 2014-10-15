@@ -1,3 +1,45 @@
-html, body {
-  margin: 20px;
+span {
+  display: inline-block;
+}
+.mine {
+  width: 15px;
+  height: 15px;
+  padding: 3px;
+  text-align: center;
+  border: 1px inset #ccc;
+  background: #c0c0c0;
+  display: inline-block;
+  line-height: 1;
+  margin-left: -4px;
+  font-family: sans-serif;
+  cursor: pointer;
+}
+
+.mine img {
+  height: 12px;
+}
+
+.mine.red {
+  color: red;
+}
+
+.mine.green {
+  color: green;
+}
+
+.mine.dark-blue {
+  color: DarkBlue;
+}
+
+.mine.maroon {
+  color: Maroon;
+}
+
+.mine.black.hasBeenChecked {
+  opacity: 0.5;
+}
+
+.mine.blownUp {
+  background: #fd1616;
+  border: 1px inset black;
 }

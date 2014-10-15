@@ -1,15 +1,14 @@
-<style>
-	button {
-		width: 25px;
-		height: 25px;
-		margin: 5px;
-	}
-</style>
+{{#if gameOver}}
+	Game over!!
+	<button {{action "resetGame" on="click"}}>
+		Reset
+	</button>
+{{/if}}
 
-{{#each bombs}}
+{{#each board.rows}}
 	<div class="row">
-		{{#each this}}
-			{{sweeper-mine contentBinding="this"}}
+		{{#each mines}}
+			{{view 'sweeper-mine' mine=this}}
 		{{/each}}
 	</div>
 {{/each}}
