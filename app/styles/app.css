@@ -6,13 +6,17 @@ span {
   height: 15px;
   padding: 3px;
   text-align: center;
-  border: 1px inset #ccc;
+  border: 2px outset #ccc;
   background: #c0c0c0;
   display: inline-block;
   line-height: 1;
   margin-left: -4px;
   font-family: sans-serif;
   cursor: pointer;
+}
+
+.mine:active {
+  border: 2px inset #ccc;
 }
 
 .mine img {
@@ -41,5 +45,4 @@ span {
 
 .mine.blownUp {
   background: #fd1616;
-  border: 1px inset black;
 }
